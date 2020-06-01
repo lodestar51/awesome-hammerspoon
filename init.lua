@@ -6,6 +6,7 @@ require './private/reminder'
 -- require 'private.caffeine'
 require 'private/bluetooth'
 require 'private/windows'
+require 'private/zz'
 hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
