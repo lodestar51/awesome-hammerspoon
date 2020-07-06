@@ -34,4 +34,33 @@ hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
 end)
 hs.alert.show("Config loaded")
 
+clipboard = hs.chooser.new(function (choice)
+  print(choice)
+end)
 
+hs.hotkey.bind({ "cmd", "shift" }, "v", function ()
+  clipboard:show()
+end)
+
+-- https://www.ahonn.me/blog/how-to-implement-clipboard-history-with-hammerspoon
+
+
+-- zz = hs.menubar.new()
+-- function setZzDisplay(state)
+--  if state then
+--  zz:setTitle("宗之")
+--  else
+--  zz:setTitle("zongzhi")
+--  end
+-- end
+
+-- function zzClicked()
+--   setZzDisplay(hs.zz.toggle("displayIdle"))
+-- end
+
+-- if zz then
+--  zz:setClickCallback(zzClicked)
+--  setZzDisplay(hs.zz.get("displayIdle"))
+-- end
+
+-- https://www.macdown.com/news/2028.html

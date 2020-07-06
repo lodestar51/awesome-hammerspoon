@@ -57,4 +57,4 @@ function addReminder()
 end
 
 --- Use
-hs.hotkey.bind({"ctrl", "alt", "cmd"}, "R", addReminder)
+hs.hotkey.bind({"ctrl", "alt", "cmd"}, "X", addReminder)

@@ -2,7 +2,7 @@ require 'private/hotkey'
 -- require 'private/input'
 -- require './private/window'
 require './private/reminder'
--- require 'private.weather'
+require 'private.weather'
 -- require 'private.caffeine'
 require 'private/bluetooth'
 require 'private/windows'
@@ -98,13 +98,15 @@ cmodal:bind('', 'Q', '关闭', function() spoon.ModalMgr:deactivate({"appM"}) en
 cmodal:bind('', 'tab', 'Toggle Cheatsheet', function() spoon.ModalMgr:toggleCheatsheet() end)
 if not hsapp_list then
     hsapp_list = {
-        {key = 'f', name = 'Finder' ,desc = ''},
+        {key = 'f', name = 'Finder' ,desc = 'Finder'},
         {key = 'd', name = 'DingTalk', desc = '钉钉'},
         {key = 's', name = 'Sublime Text' ,desc = 'Sublime编辑器'},
         {key = 'a', name = 'Safari' ,desc = 'safari浏览器'},
         {key = 't', name = 'iTerm' , desc = 'iTerm终端'},
         {key = 'g', name = 'Google Chrome' ,desc = '浏览器'},
         {key = 'v', name = 'Visual Studio Code' ,desc = 'VSCODE'},
+        {key = 'e', name = 'Emacs' ,desc = 'Emacs编辑器'},
+        {key = 'x', name = 'x' ,desc = 'x'},
         {key = 'c', id = 'com.apple.ActivityMonitor'},
         {key = 'y', id = 'com.apple.systempreferences'},
     }
