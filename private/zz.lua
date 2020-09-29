@@ -4,7 +4,8 @@
 
 --HS在MAC原生的弹窗测试
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "W", function()
-    hs.notify.new({title="HS的测试", informativeText="Hello World"}):send()
+    -- hs.notify.new({title="HS的测试", informativeText="Hello World"}):send()
+    hs.alert.show("this is a test");
   end)
 -- 对于当前窗口进行左移动的操作
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "H", function()
@@ -64,3 +65,4 @@ end)
 -- end
 
 -- https://www.macdown.com/news/2028.html
+

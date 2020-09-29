@@ -104,7 +104,7 @@ if not hsapp_list then
         {key = 'a', name = 'Safari' ,desc = 'safari浏览器'},
         {key = 't', name = 'iTerm' , desc = 'iTerm终端'},
         {key = 'g', name = 'Google Chrome' ,desc = '浏览器'},
-        {key = 'v', name = 'Visual Studio Code' ,desc = 'VSCODE'},
+        {key = 'v', name = 'Visual Studio Code' ,desc = 'VsCode编辑器'},
         {key = 'e', name = 'Emacs' ,desc = 'Emacs编辑器'},
         {key = 'x', name = 'x' ,desc = 'x'},
         {key = 'c', id = 'com.apple.ActivityMonitor'},
