@@ -33,6 +33,7 @@ end)
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
   hs.reload()
 end)
+
 hs.alert.show("Config loaded")
 
 clipboard = hs.chooser.new(function (choice)

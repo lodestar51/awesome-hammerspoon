@@ -67,7 +67,7 @@ end)
 hotkey.bind(hyper, 'C', function()
   local cwin = hs.window.focusedWindow()
   cwin:centerOnScreen()
-  -- window.focusedWindow():centerOnScreen()
+  window.focusedWindow():centerOnScreen()
 end)
 
 -- maximize window
@@ -99,22 +99,22 @@ hotkey.bind(hyperShift, "H", function()
   window.switcher.nextWindow()
 end)
 
--- move active window to previous monitor
+-- move active window to previous monitor 窗口SHIFT+ALT+<- 移动上个显示器
 hotkey.bind(hyperShift, "Left", function()
   window.focusedWindow():moveOneScreenWest()
 end)
 
--- move active window to next monitor
+-- move active window to next monitor 窗口SHIFT+ALT+-> 移动下个显示器
 hotkey.bind(hyperShift, "Right", function()
   window.focusedWindow():moveOneScreenEast()
 end)
 
--- move cursor to previous monitor
+-- move cursor to previous monitor CTRL+ALT+<- 鼠标移动上个显示器
 hotkey.bind(hyperCtrl, "Left", function ()
   focusScreen(window.focusedWindow():screen():previous())
 end)
 
--- move cursor to next monitor
+-- move cursor to next monitor CTRL+ALT+<- 鼠标移动下个显示器
 hotkey.bind(hyperCtrl, "Right", function ()
   focusScreen(window.focusedWindow():screen():next())
 end)
@@ -140,7 +140,7 @@ function focusScreen(screen)
   mouse.setAbsolutePosition(pt)
 end
 
--- maximized active window and move to selected monitor
+-- maximized active window and move to selected monitor 移动到显示器上
 moveto = function(win, n)
   local screens = screen.allScreens()
   if n > #screens then
@@ -150,7 +150,7 @@ moveto = function(win, n)
     alert.show("Move " .. win:application():name() .. " to " .. toWin)
 
     layout.apply({{nil, win:title(), toWin, layout.maximized, nil, nil}})
-    
+ 
   end
 end
 
