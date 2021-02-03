@@ -2,11 +2,15 @@ require 'private/hotkey'
 -- require 'private/input'
 -- require './private/window'
 require './private/reminder'
-require 'private.weather'
+require 'private/weather'
 -- require 'private.caffeine'
 require 'private/bluetooth'
 require 'private/windows'
 require 'private/zz'
+-- require 'private/sspai'
+require 'private/cherry'
+require 'private/collage'
+
 hs.hotkey.alertDuration = 0
 hs.hints.showTitleThresh = 0
 hs.window.animationDuration = 0
@@ -55,7 +59,7 @@ if not hspoon_list then
         "HCalendar",
         "HSaria2",
         "HSearch",
-        "SpeedMenu",
+        -- "SpeedMenu",
         "WinWin",
         "FnMate",
     }
@@ -106,7 +110,9 @@ if not hsapp_list then
         {key = 'g', name = 'Google Chrome' ,desc = '浏览器'},
         {key = 'v', name = 'Visual Studio Code' ,desc = 'VsCode编辑器'},
         {key = 'e', name = 'Emacs' ,desc = 'Emacs编辑器'},
-        {key = 'x', name = 'x' ,desc = 'x'},
+        {key = 'x', name = 'Microsoft Excel' ,desc = 'Excel'},
+        {key = 'p', name = 'Microsoft PowerPoint' ,desc = 'PPT'},
+        {key = 'o', name = 'OmniGraffle' ,desc = 'Graffle'},
         {key = 'c', id = 'com.apple.ActivityMonitor'},
         {key = 'y', id = 'com.apple.systempreferences'},
     }
@@ -395,6 +401,9 @@ hsconsole_keys = hsconsole_keys or {"alt", "Z"}
 if string.len(hsconsole_keys[2]) > 0 then
     spoon.ModalMgr.supervisor:bind(hsconsole_keys[1], hsconsole_keys[2], "Toggle Hammerspoon Console", function() hs.toggleConsole() end)
 end
+
+-- add by zongzhi
+-- calendar
 
 ----------------------------------------------------------------------------------------------------
 -- Finally we initialize ModalMgr supervisor

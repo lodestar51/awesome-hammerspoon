@@ -9,7 +9,7 @@ local function Chinese()
     hs.keycodes.currentSourceID("com.apple.keylayout.ABC")
   end
   hs.console.printStyledtext("inputM:" + hs.keycodes.currentSourceID())
-  
+
   local function set_app_input_method(app_name, set_input_method_function, event)
     event = event or hs.window.filter.windowFocused
     hs.window.filter.new(app_name)
@@ -22,5 +22,5 @@ local function Chinese()
   set_app_input_method('Terminal', English)
   set_app_input_method('iTerm2', English)
   set_app_input_method('Google Chrome', English)
-  set_app_input_method('WeChat', Chinese)
+  set_app_input_method('Sublime Text', English)
   -----------------------mine end-----------------------------
